@@ -1,10 +1,11 @@
-require('dotenv').config
-//require('module-alias/register');
+require('dotenv').config();
 
+//require('module-alias/register');
+const config = require('./src/config/index');
 const app = require('./src/app.js');
 //const mongoose = require('mongoose');
 
-app.listen(4000, (err) => {
+app.listen(config.app.port, (err) => {
     if(err){
         return console.log('erro');
     }
