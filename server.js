@@ -1,10 +1,12 @@
-const express = require('express');
-const mongoose = require('mongoose');
+require('dotenv').config
+//require('module-alias/register');
 
-const app = express();
+const app = require('./src/app.js');
+//const mongoose = require('mongoose');
 
-app.get('/', (req, res) => {
-    res.send('Hello AAAAAAAAAA');
+app.listen(4000, (err) => {
+    if(err){
+        return console.log('erro');
+    }
+    console.log('iniciou em http://localhost:4000');
 });
-
-app.listen(4000);
